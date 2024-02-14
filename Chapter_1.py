@@ -12,9 +12,12 @@ im_Gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 im_Blur = cv2.GaussianBlur(im_Gray,(5,5),0)
 im_Canny = cv2.Canny(img, 150, 200)
 img_Dialation = cv2.dilate(im_Canny,kernel,iterations=1)
+im_Eroded = cv2.erode(img_Dialation, kernel, iterations=1)
 
 cv2.imshow("Gray_Image", im_Gray)
 cv2.imshow("blurred Image", im_Blur)
 cv2.imshow("Canny Image", im_Canny)
 cv2.imshow("Dialation Image", img_Dialation)
+cv2.imshow("Erosion image", im_Eroded)
+
 cv2.waitKey(0)
