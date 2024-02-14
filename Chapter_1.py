@@ -1,9 +1,7 @@
 import cv2
 
-cap = cv2.VideoCapture(0)
+img = cv2.imread("/Users/yossipartouche/Desktop/Doc Photo/ISRAELI ID.jpeg")
+im_Gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-while True:
-    success, img = cap.read()
-    cv2.imshow("video", img)
-    if cv2.waitKey(1) & 0xFF ==ord('q'):
-        break
+cv2.imshow("Gray_Image", im_Gray)
+cv2.waitKey(0)
