@@ -4,11 +4,11 @@ import cv2
 img = cv2.imread("/Users/yossipartouche/Desktop/Doc Photo/ISRAELI ID.jpeg")
 print(img.shape)
 #                                   height, width
-#   ---->
+#   x-direction---->
 #  |
 #  |
 #  v
-
+#  y-direction
 imgResize = cv2.resize(img, (500, 400))
 
 imgCropped = img[0:100, 100:200]
